@@ -1,0 +1,45 @@
+/* Center the logo on medium and smaller screens */
+.navbar-brand {
+  margin-left: 50px
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    margin-left: 150px;
+  }
+    
+}
+
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+body {
+    color: black !important;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.carousel-caption {
+    position: absolute;
+    z-index: 2; /* Ensures text is above overlay */
+}
+
+.carousel-caption > *{
+    color: #FF9800; /* White text for contrast */
+}
+
